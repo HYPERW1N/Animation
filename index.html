@@ -1,2 +1,50 @@
-<html body>
-  <body> testing rn </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #content {
+            display: block;
+        }
+
+        #hiddenContent {
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <button onclick="toggleContent()">Toggle Content</button>
+</div>
+
+<div id="hiddenContent">
+    <p>This is the hidden text that appears when you click the button.</p>
+</div>
+
+<script>
+    function toggleContent() {
+        var contentDiv = document.getElementById('content');
+        var hiddenContentDiv = document.getElementById('hiddenContent');
+
+        contentDiv.style.display = 'none';
+        hiddenContentDiv.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
